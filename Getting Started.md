@@ -129,10 +129,10 @@ The fields mean:
 #!/bin/bash
 # Use the Messaging API to send an SMS
 AccessToken="Access Token"
-Dest="Destination number"
+dest="Destination number"
 curl -X post -H "Authorization: Bearer $AccessToken" \
   -H "Content-Type: application/json" \
-  -d '{ "to":"$dest1, $dest2, $dest3", "body":"Test Message" }' \
+  -d '{ "to":["$dest1", "$dest2", "$dest3"] "body":"Test Message" }' \
   https://tapi.telstra.com/v2/messages/sms
 ```
 A number of parameters can be used in this call, these are;
